@@ -89,6 +89,10 @@ function render() {
       deleteElement(index);
     });
     div2.append(btnDelete);
+
+    btnEdit.addEventListener("click", () => {
+      editElement(index);
+    });
   });
 }
 
@@ -101,5 +105,51 @@ function deleteElement(index) {
   render();
 }
 
+//? edit
+let modal = document.querySelector(".modal");
+let inpName = document.querySelector(".edit-name ");
+let inpNumber = document.querySelector(".edit-number");
+let inpUrl = document.querySelector(".edit-url");
 
-//?hkjvbhkvh
+let btnSave = document.querySelector(".edit-save");
+let btnClose = document.querySelector(".btnCloseEdit");
+
+btnSave.addEventListener("click", (e) => {
+  e.preventDefault();
+  let data = JSON.parse(localStorage.getItem("people"));
+  console.log(data);
+  let nameId = inpName.id;
+  let numberId = inpNumber.id;
+  let urlId = inpUrl.id;
+
+  let upPeople = {
+    name: inpName.value,
+    number: inpNumber.value,
+    url: inpUrl.value,
+  };
+
+  data.splice(nameId, 1, upPeople);
+  data.splice(numberId, 1, upPeople);
+  data.splice(urlId, 1, upPeople);
+  localStorage.setItem("people", JSON.stringify(data));
+  modal.style.display = "none";
+  render();
+});
+
+btnClose.addEventListener("click", (e) => {
+  e.preventDefault();
+  modal.style.display = "none";
+  render();
+});
+
+function editElement(index) {
+  modal.style.display = "flex";
+  let data = JSON.parse(localStorage.getItem("people"));
+  inpName.setAttribute("id", index);
+  inpNumber.setAttribute("id", index);
+  inpUrl.setAttribute("id", index);
+
+  inpName.value = data[index].name;
+  inpNumber.value = data[index].number;
+  inpUrl.value = data[index.number];
+}
