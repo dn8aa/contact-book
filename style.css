@@ -5,6 +5,10 @@ body {
   padding: 0;
   font-family: "Caveat", cursive;
 }
+.btnCloseEdit{
+    height: 25px;
+    margin-left: 40px;
+}
 .wrapper {
   width: 800px;
   height: 80px;
@@ -14,7 +18,12 @@ body {
   margin-top: 20px;
   padding: 15px;
   display: flex;
+  justify-content: center;
+  align-content: center;
 }
+/* .modal{
+    display: none;
+} */
 button {
   background-color: white;
   cursor: pointer;
@@ -23,6 +32,7 @@ button {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-content: center;
 }
 
 #name,
@@ -42,6 +52,28 @@ button {
   font-family: "Caveat", cursive;
   font-size: 20px;
 }
+
+.edit-name,
+.edit-number,
+.edit-url,
+.edit-save {
+  height: 40px;
+  align-items: center;
+  margin: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  /* margin-right: 20px; */
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  font-family: "Caveat", cursive;
+  font-size: 20px;
+}
+
+.edit-save {
+  width: 70px;
+  border: 2px yellow solid;
+}
 #name {
   width: 90px;
 }
@@ -50,6 +82,17 @@ button {
 }
 
 .save {
+  width: 70px;
+  border: 2px yellow solid;
+}
+#edit-name {
+  width: 90px;
+}
+#edit-number {
+  width: 250px;
+}
+
+.edit-save {
   width: 70px;
   border: 2px yellow solid;
 }
@@ -65,7 +108,6 @@ button {
   background-color: lightblue;
   border-radius: 10px;
   display: none;
-  
 }
 ul {
   width: 800px;
@@ -114,10 +156,13 @@ ul {
   width: 50px;
   margin-left: 10px;
   border-radius: 10px;
-  
 }
 span {
   margin-right: 30px;
   padding: 3px;
   padding-left: 30px;
+}
+
+.modal{
+    display: none;
 }
