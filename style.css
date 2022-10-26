@@ -1,0 +1,123 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Caveat", cursive;
+}
+.wrapper {
+  width: 800px;
+  height: 80px;
+  background-color: yellowgreen;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 15px;
+  display: flex;
+}
+button {
+  background-color: white;
+  cursor: pointer;
+}
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#name,
+#number,
+#url,
+.save,
+.show-book {
+  height: 40px;
+  align-items: center;
+  margin: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  /* margin-right: 20px; */
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  font-family: "Caveat", cursive;
+  font-size: 20px;
+}
+#name {
+  width: 90px;
+}
+#number {
+  width: 250px;
+}
+
+.save {
+  width: 70px;
+  border: 2px yellow solid;
+}
+.show-book {
+  width: 140px;
+  border: 2px yellow solid;
+}
+.book {
+  width: 800px;
+  margin: auto;
+  padding: 15px;
+  margin-top: 20px;
+  background-color: lightblue;
+  border-radius: 10px;
+  display: none;
+  
+}
+ul {
+  width: 800px;
+  margin: auto;
+  padding: 0;
+}
+.item {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  height: 80px;
+  font-size: 25px;
+  justify-content: space-between;
+}
+
+.left,
+.right {
+  margin: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+}
+.edit,
+.delete {
+  width: 80px;
+  padding: 5px;
+  font-family: "Caveat", cursive;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+}
+.left {
+  background-color: aliceblue;
+  border-radius: 10px;
+  width: 70%;
+  /* justify-content: center; */
+  align-items: center;
+}
+.right {
+  align-content: space-between;
+  justify-content: space-between;
+  width: 180px;
+}
+.img {
+  width: 50px;
+  margin-left: 10px;
+  border-radius: 10px;
+  
+}
+span {
+  margin-right: 30px;
+  padding: 3px;
+  padding-left: 30px;
+}
