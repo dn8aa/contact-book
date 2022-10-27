@@ -35,6 +35,9 @@ save.addEventListener("click", (e) => {
   };
   setItemToStorage(obj);
   render();
+  name.value = ''
+  number.value = ''
+  url.value = ''
 });
 
 function setItemToStorage(person) {
@@ -139,7 +142,6 @@ btnSave.addEventListener("click", (e) => {
 btnClose.addEventListener("click", (e) => {
   e.preventDefault();
   modal.style.display = "none";
-  render();
 });
 
 function editElement(index) {
@@ -151,5 +153,5 @@ function editElement(index) {
 
   inpName.value = data[index].name;
   inpNumber.value = data[index].number;
-  inpUrl.value = data[index.number];
+  inpUrl.value = data[index].url;
 }
